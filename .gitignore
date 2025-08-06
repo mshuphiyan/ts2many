@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# IDEs & Editors
+.idea/
+.vscode/
+*.iml
+
+# Environments
+venv/
+.env
+
+# Output / Build
+out/
+dist/
+build/
+
+# Node.js
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+ts2any-env/

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "UserController",
+    "decorators": [
+      "@Controller('users')"
+    ],
+    "extends": "BaseController",
+    "implements": [
+      "OnInit"
+    ],
+    "properties": [],
+    "constructorParams": [
+      {
+        "name": "userService",
+        "type": "UserService",
+        "decorators": []
+      }
+    ],
+    "methods": [
+      {
+        "name": "getAll",
+        "returnType": "Promise<User[]>",
+        "parameters": []
+      },
+      {
+        "name": "create",
+        "returnType": "Promise<User>",
+        "parameters": [
+          {
+            "name": "userDto",
+            "type": "CreateUserDto"
+          }
+        ]
+      }
+    ]
+  }
+]

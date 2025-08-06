@@ -1,0 +1,10 @@
+{% for d in cls.decorators -%}
+@{{ d }}
+{% endfor %}
+public class {{ cls.name }} {
+    {% for method in cls.methods %}
+    public void {{ method }}() {
+        // TODO
+    }
+    {% endfor %}
+}

@@ -1,0 +1,80 @@
+
+This project converts TypeScript (e.g., NestJS) classes, DTOs, and services into Java Spring Boot equivalents using a custom-built Python-based parser and code generator.
+
+---
+
+## 🚀 Features
+
+- Converts Controllers, Services, DTOs, Entities, Repositories
+- Supports Java Gradle project generation
+- Import optimizer & type mapping
+- Multi-file output under correct package structure
+- Extensible to FastAPI, Spring Boot, etc.
+
+---
+
+## 📁 Project Structure
+
+typescript-to-java-converter/
+│
+├── main.py # Entry point
+├── ir/ # Intermediate representation models
+├── generators/ # Controller, Service, DTO, Entity, Repository generators
+├── utils/ # Type mappers, import optimizer
+├── scaffolders/ # Java project scaffolding (Gradle)
+├── out/java/ # Output Java project (auto-generated)
+└── ...
+
+---
+
+## ⚙️ Requirements
+
+- Python 3.10+
+- Git
+- Optional: `gh` GitHub CLI (for pushing to GitHub)
+
+Install dependencies if any (you can create a `requirements.txt`):
+
+```bash
+pip install -r requirements.txt
+🛠️ How to Use (Command Sequence)
+
+1. Clone / Pull the Repo
+
+git clone https://github.com/YOUR_USERNAME/typescript-to-java-converter.git
+cd typescript-to-java-converter
+
+2. Add Your TypeScript Files
+
+Place your .ts files (e.g., NestJS source) under a folder like input/.
+3. Run the Converter
+
+python main.py \
+  --input-dir input/ \
+  --output-dir out/java \
+  --package com.example.demo
+
+✅ This generates a full Spring Boot Gradle project in out/java.
+📦 Generated Java Output (Example)
+out/java/
+└── src/
+    └── main/
+        └── java/
+            └── com/example/demo/
+                ├── controller/
+                ├── service/
+                ├── dto/
+                ├── entity/
+                └── repository/
+
+Includes:
+build.gradle
+settings.gradle
+All .java files
+
+🧠 Extending the Converter
+
+You can extend:
+type_mapper.py → Map more TS→Java types
+controller_generator.py, etc. → Add advanced annotations
+dto_generator.py, entity_generator.py → Add field-level decorators

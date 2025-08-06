@@ -1,0 +1,24 @@
+[
+  {
+    "name": "UserController",
+    "decorators": [
+      "@Controller('user')"
+    ],
+    "extends": null,
+    "implements": [],
+    "properties": [],
+    "constructorParams": [],
+    "methods": [
+      {
+        "name": "getAllUsers",
+        "returnType": "string",
+        "parameters": []
+      },
+      {
+        "name": "createUser",
+        "returnType": "string",
+        "parameters": []
+      }
+    ]
+  }
+]
