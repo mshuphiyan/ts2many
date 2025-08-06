@@ -49,10 +49,11 @@ cd typescript-to-java-converter
 Place your .ts files (e.g., NestJS source) under a folder like input/.
 3. Run the Converter
 
-python main.py \
-  --input-dir input/ \
+python main.py \                                           
+  --input src \
+  --lang java \
   --output-dir out/java \
-  --package com.example.demo
+  --package com.myapp.demo
 
 ✅ This generates a full Spring Boot Gradle project in out/java.
 📦 Generated Java Output (Example)
